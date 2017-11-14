@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE idea-plugin PUBLIC
+  "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin version="2" url="https://github.com/syllant/idea-plugin-linessorter">
+  <id>org.demo.plugins.lazypacking</id>
+  <name>LazyPacking</name>
+  <category>Editor</category>
+  <description><![CDATA[
+<html>
+  Add <em>LazyPacking</em> action in <em>Edit</em> menu to pack your projects automatically.
+</html>
+    ]]></description>
+  <version>1.0.0</version>
+  <vendor email="xiongjy2104@gmail.com" url="https://github.com/xiongjy2104">xxx</vendor>
+  <change-notes><![CDATA[
+<html>
+
+  <b>1.0</b> (10/16/2017)
+  <ul>
+    <li>Initial release
+  </ul>
+</html>
+]]></change-notes>
+  <idea-version since-build="90.10000"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <actions>
+
+    <group id="lazy.packing.group">
+      <separator/>
+      <action id="lazy.packing"
+              class="com.demo.plugins.LazyPackingAction"
+              text="lazy packing"
+              description="pack your projects automatically for lazy guys">
+        <keyboard-shortcut keymap="$default" first-keystroke="alt shift l"/>
+      </action>
+      <add-to-group group-id="EditMenu" anchor="last"/>
+    </group>
+  </actions>
+
+</idea-plugin>
